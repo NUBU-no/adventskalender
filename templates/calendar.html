@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="static/css/my_bootstrap.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<header class="bg-primary">
+<h1 class="mb-4 text-center text-light">🎄 Logteamets Julekalender 🎅<h1>
+<hr>
+  <div class="container">
+    <div class="row h-100">
+  {% for i in range(24)  %}
+
+      <div class="col-sm-3 ">
+        <button type="button" class="btn btn-primary btn-lg btn-block bg-danger" data-toggle="modal" data-target="#exampleModal">LUKE {{i+1}}</button>
+      
+      </div>
+  {% endfor %}
+    </div>
+  </div>
+</header>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="nettskjema-iframe"
+            src="https://nettskjema.no/a/171425?embed=1"
+            title="Testskjema 5 nov"
+            frameborder="0"
+            width="500px"
+            height="100%">Hvis du kan lese dette, støtter ikke nettleseren din iframes.
+          </iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
