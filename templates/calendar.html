@@ -58,11 +58,10 @@
 <script>
 $(document).ready(function(){
   $('#exampleModal').on('show.bs.modal', function (event) {
-    var nettskjema_ids=[
-      '173393',
-      '173394',
-      '173446'
-    ]
+    var nettskjema_ids=[]
+    {% for id in nettskjema_ids%}
+      nettskjema_ids.push({{id}})
+    {% endfor %}
     for (var i = 0; nettskjema_ids.length < 24; i++) {
       nettskjema_ids = nettskjema_ids.concat(nettskjema_ids);
       

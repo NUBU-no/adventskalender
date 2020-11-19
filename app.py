@@ -14,9 +14,13 @@ def hello_world():
     if 'username' in session:
         current_day = datetime.now().day
         clicked_dict = dict()
+        line_ragna_ns = ['172468', '172469', '172477', '172898', '173272']
+        anders_ns = ['173393', '173394', '173446', '173511', '173517']
+        siva_ns = ['173516', '173733', '173696', '173682', '173764']
+        nettskjema_ids = line_ragna_ns + anders_ns + siva_ns
         if 'clicked_date' in session:
             clicked_dict = session['clicked_date']
-        return render_template('calendar.html', username = session['username'], current_day=current_day, clicked_dict = clicked_dict)
+        return render_template('calendar.html', username = session['username'], current_day=current_day, clicked_dict = clicked_dict, nettskjema_ids=nettskjema_ids)
     else:
         return render_template('getusername.html')
 
